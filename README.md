@@ -16,6 +16,8 @@ Sabemos que muitas das vezes, essas mulheres não tem a coragem de que precisam 
 
 A proposta é que as mulheres saibam que podem buscar ajuda, saibam como buscar essa ajuda e principalmente, onde.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### ✔️FUNCIONALIDADES:
 * Listar todos os grupos cadastrados;
 * Visuliazar grupos a partir do nome;
@@ -25,6 +27,8 @@ A proposta é que as mulheres saibam que podem buscar ajuda, saibam como buscar 
 * Modificar horário de atendimento;
 * Remover um grupo pelo id;
 * Remover um grupo pelo nome;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 🔗ARQUITETURA MVC: 
   📁 AjudeUmaMulher   
@@ -57,6 +61,7 @@ A proposta é que as mulheres saibam que podem buscar ajuda, saibam como buscar 
   |-  📄 Swagger.js
   |-  📁 material    
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Recursos utilizados para o desenevolvimento e execução do projeto:
  * Linguagem: Java Script
@@ -64,9 +69,11 @@ A proposta é que as mulheres saibam que podem buscar ajuda, saibam como buscar 
  * Pacote: Node Modules
  * Banco de Dados: MongoDB Atlas
  * Documentação: Swagger
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Utilizei o Postman para testar as requisições.
 
  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### -feito com 💜 por [LAÍS FERREIRA](https://www.linkedin.com/in/la%C3%ADs-ferreira-80a3b879/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BScRsDh9XS32ExcqxqY%2FIXA%3D%3D) ♑
