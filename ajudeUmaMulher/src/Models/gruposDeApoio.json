@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Grupo de Apoio a Mulher de Olinda",
+        "localization": "Olinda",
+        "addres": "xxx-xxx",
+        "phoneNumber": "923-457",
+        "attendence": "24 horas",
+        "services": "Serviço de atendimento psicológico, jurídico, social e educacional. Grupo de whatsapp formado por mulheres que já passaram por alguma situação de violência que ajudam outras mulheres, como forma de demonstrar apoio e suporte para que elas saiam dessa situação em segurança. Grupos tipo creche com rotatividade de mãe voluntária cuidadora dos filhos de mulheres que precisam ir em busca de emprego.",
+        "whatsapp group": "True"
+    },
+    {
+        "id": 2,
+        "name": "Grupo de Apoio a Mulher de Recife",
+        "localization": "Recife",
+        "addres": "xxx-xxx",
+        "phoneNumber": "991-476",
+        "attendence": "24 horas",
+        "services": "Serviço de acolhimento, serviços jurídicos, social e psicológicos. Grupo de whatsapp formado por mulheres que já passaram por alguma situação de violência que ajudam outras mulheres, como forma de demonstrar apoio e suporte para que elas saiam dessa situação em segurança. Encontros semanais com mulheres que recém sairam de um ambiente violento",
+        "whatsapp group": "True"
+    },
+    {
+        "id": 3,
+        "name": "Grupo de Apoio a Mulher de Caruaru",
+        "localization": "Caruaru",
+        "addres": "xxx-xxx",
+        "phoneNumber": "943-252",
+        "attendence": "24 horas",
+        "services": "Serviços de atendimento psicológico, social e educacional. Encontros semanais com mulheres que recém sairam de um ambiente violento. Grupo de Whatsapp. Grupos com rotatividade de mãe voluntária cuidadora dos filhos de mulheres que precisam ir em busca de emprego.",
+        "whatsapp group": "True"
+    },
+    {
+        "id": 4,
+        "name": "Grupo de Apoio a Mulher de Petrolina",
+        "localization": "Petrolina",
+        "addres": "xxx-xxx",
+        "phoneNumber": "935-821",
+        "attendence": "24 horas",
+        "services": "Serviço de atendimento psicológico, social e encaminhamento para cursos profissionalizantes. Grupo de whatsapp formado por mulheres que já passaram por alguma situação de violência que ajudam outras mulheres, como forma de demonstrar apoio e suporte para que elas saiam dessa situação em segurança. Grupos com rotatividade de mãe voluntária como cuidadora dos filhos de mulheres que precisam ir em busca de emprego. ",
+        "whatsapp group": "True"
+    },
+    {
+        "id": 5,
+        "name": "Grupo de Apoio a Mulher de Gravatá",
+        "localization": "Gravatá",
+        "addres": "xxx-xxx",
+        "phoneNumber": "993-478",
+        "attendence": "7h às 22h",
+        "services": "Serviço de atendimento psicológico, educacional, social e encaminhamento para cursos profissionalizantes. Grupos com rotatividade de mãe voluntária como cuidadora dos filhos de mulheres que precisam ir em busca de emprego. Encontros semanais com mulheres que recém sairam de um ambiente violento",
+        "whatsapp group": "True"
+    }
+]
