@@ -223,6 +223,9 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -232,9 +235,19 @@
     "/grupos/delete/name": {
       "delete": {
         "description": "",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

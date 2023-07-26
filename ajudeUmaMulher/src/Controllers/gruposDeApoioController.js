@@ -135,22 +135,6 @@ const deleteGroup = async (request, response) => {
     }
 };
 
-const deleteGroupByName = async (request, response) => {
-    try {
-        const deleteGroup = await gruposDeApoioModel.deleteOne({
-        name: request.query.name
-    });
-        response.status(200).json(deleteGroup) 
-    }  catch (error){
-        console.error(error)
-        response.status(500).json({message: error.message})
-    }
-}
-
-
-
-
-
 
 module.exports = {
     getAllGroups,
@@ -159,6 +143,5 @@ module.exports = {
     addNewGroup,
     updateServicesById,
     updateAttendenceById,
-    deleteGroup,
-    deleteGroupByName
+    deleteGroup
 }

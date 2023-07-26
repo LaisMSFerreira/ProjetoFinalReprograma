@@ -9,7 +9,6 @@ router.post("/add", Controller.addNewGroup);
 router.put("/update/:id", Controller.updateServicesById);
 router.patch("/change/:id", Controller.updateAttendenceById);
 router.delete("/delete/:id", Controller.deleteGroup);
-router.delete("/delete/name", Controller.deleteGroupByName);
 
 
 module.exports = router
