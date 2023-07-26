@@ -11,16 +11,21 @@ const getAllGroups = async (request, response) => {
 
 const getGroupByName = async (request, response) => {
     try {
-        const findName = await gruposDeApoioModel.findByName(request.query.name);
-        response.status(200).json(findName);
+        const findGroup = await gruposDeApoioModel.findOne({
+            name: request.query.name
+        });
+        response.status(200).json(findGroup);
     } catch (error) {
+        console.error(error)
         response.status(500).json({ message: error.message })
     }
 };
 
 const getGroupsByLocalization = async (request, response) => {
     try {
-        const findLocalization = await gruposDeApoioModel.findByLocalization(request.query.localization);
+        const findLocalization = await gruposDeApoioModel.findOne({
+            localization: request.query.localization
+        });
         response.status(200).json(findLocalization);
     } catch (error) {
         response.status(500).json({ message: error.message })
@@ -109,7 +114,7 @@ const updateAttendenceById = async (request, response,) => {
                 whatsappGroup,
             }
         );
-        response.status(200).json({message: "Services updated.", updateServices})
+        response.status(200).json({message: "Attendence updated.", updateServices})
     } catch (error) {
         console.error(error);
         response.status(500).json({ message: "Unable to update!" })
@@ -121,26 +126,27 @@ const deleteGroup = async (request, response) => {
     try {
         const {id} = request.params
         const deleteGroup = await gruposDeApoioModel.findByIdAndDelete(id)
-        const message = `Group ${deleteGroup.name} sucessfully deleted.`
-        res.status(200).json({message})
+        const message = `Group: ${deleteGroup.name} sucessfully deleted.`
+        response.status(200).json({message})
     } catch (error) {
         console.error(error)
         response.status(500).json({message: "Undeleted group"
-        })
+        });
+    }
+};
+
+const deleteGroupByName = async (request, response) => {
+    try {
+        const deleteGroup = await gruposDeApoioModel.deleteOne({
+        name: request.query.name
+    });
+        response.status(200).json(deleteGroup) 
+    }  catch (error){
+        console.error(error)
+        response.status(500).json({message: error.message})
     }
 }
 
-const deleteGroupByName = (request, response) => {
-    const idRequest = request.params.name
-    const deleteGroup = gruposDeApoioModel.findIndex(group => group.name == idRequest)
-    gruposDeApoioModel.splice(deleteGroup, 1)
-
-    response.status(200).json([{
-        "message": "Group deleted",
-        "Deleted": idRequest,
-        gruposDeApoioModel
-    }])
-}
 
 
 

@@ -18,7 +18,6 @@ const gruposDeApoioSchema = new mongoose.Schema(
         addres:{
             type: String,
             required: true,
-            unique: true
         },
         phoneNumber:{
             type: Number,
