@@ -1,15 +1,15 @@
-const gruposDeApoioController = require("../Controllers/gruposDeApoioController")
-const express = require("express")
-const router = express.Router()
+const Controller = require("../Controllers/gruposDeApoioController");
+const express = require("express");
+const router = express.Router();
 
-router.get("/lista", gruposDeApoioController.getAllGroups)
-router.get("/name", gruposDeApoioController.getGroupByName) 
-router.get("/localization", gruposDeApoioController.getGroupsByLocalization)
-router.post("/add", gruposDeApoioController.addNewGroup)
-router.put("/update/:id", gruposDeApoioController.updateServicesById)
-router.patch("/change/:id", gruposDeApoioController.updateAttendenceById)
-router.delete("/delete/:id", gruposDeApoioController.deleteGroupsById)
-router.delete("/delete/name", gruposDeApoioController.deleteGroupByName)
+router.get("/lista", Controller.getAllGroups);
+router.get("/name", Controller.getGroupByName);
+router.get("/localization", Controller.getGroupsByLocalization);
+router.post("/add", Controller.addNewGroup);
+router.put("/update/:id", Controller.updateServicesById);
+router.patch("/change/:id", Controller.updateAttendenceById);
+router.delete("/delete/:id", Controller.deleteGroup);
+router.delete("/delete/name", Controller.deleteGroupByName);
 
 
 module.exports = router

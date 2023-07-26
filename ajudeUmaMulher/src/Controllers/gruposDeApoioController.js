@@ -1,143 +1,146 @@
-const { response, request } = require("express")
-const gruposDeApoioJson = require("../Models/gruposDeApoio.json")
+const gruposDeApoioModel = require("../Models/gruposDeApoioModel")
 
-const getAllGroups = (request, response) => {
+const getAllGroups = async (request, response) => {
     try {
-        response.status(200).json([{
-            grupos : gruposDeApoioJson
-        }])
-    } catch (err) {
-        response.status(500).send([{
-            message : "Server error!"
-        }])
-    }
-}
+        const allGroups = await gruposDeApoioModel.find({}, null);
+        response.status(200).json(allGroups);
+    } catch {
+        response.status(500).json({ message: error.message });
+    };
+};
 
-const getGroupByName = (request, response) => {
-    const nameRequest = request.query.name;
-    const nameFilter = gruposDeApoioJson.filter((grupos) => grupos.name == nameRequest)
-    if (nameFilter.length > 0) {
-        response.status(200).send(nameFilter)
-    } else {
-        response.status(404).send([{
-            message : "Name Not Found!"
-        }])
-    }
-}
-
-const getGroupsByLocalization = (request, response) => {
-    const localizationRequest = request.query.localization;
-    const localizationFilter = gruposDeApoioJson.filter((grupos) => grupos.localization == localizationRequest)
-    if(localizationFilter.length > 0) {
-        response.status(200).send(localizationFilter)
-    } else {
-        response.status(404).send([{
-            message : "Localization not found!"
-        }])
-    }
-}
-
-const addNewGroup = (request, response) => {
+const getGroupByName = async (request, response) => {
     try {
-        let nameRequest
-        let localizationRequest
-        let addresRequest
-        let phoneNumberRequest
-        let attendanceRequest
-        let servicesRequest
-        let whatsappGroupRequest
-
-        let newGroup = {
-        id: Math.floor(Date.now() * Math.random()).toString(36), 
-        name: nameRequest,
-        localization: localizationRequest,
-        addres: addresRequest,
-        phoneNumber: phoneNumberRequest,
-        attendance: attendanceRequest,
-        services: servicesRequest,
-        whatsappGroup: whatsappGroupRequest,
-        };
-gruposDeApoioJson.push(newGroup)
-response.status(201).json([{
-    message: "New group successfully registered!",
-}])
+        const findName = await gruposDeApoioModel.findByName(request.query.name);
+        response.status(200).json(findName);
     } catch (error) {
-        console.log(error)
-        response.status(500).send([{
-            message: "Error to register new group!"
-        }])
+        response.status(500).json({ message: error.message })
+    }
+};
+
+const getGroupsByLocalization = async (request, response) => {
+    try {
+        const findLocalization = await gruposDeApoioModel.findByLocalization(request.query.localization);
+        response.status(200).json(findLocalization);
+    } catch (error) {
+        response.status(500).json({ message: error.message })
     }
 }
 
-const updateServicesById = (request, response) => {
-    const idRequest = request.params.id
-    let servicesRequest = request.body
-    let findServices = gruposDeApoioJson.findIndex((grupos) => grupos.id == idRequest)
+const addNewGroup = async (request, response) => {
+    try {
+        const {
+            name,
+            localization,
+            addres,
+            phoneNumber,
+            attendence,
+            services,
+            whatsappGroup
+        } = request.body;
 
-    if (gruposDeApoioJson.splice(findServices, 1, servicesRequest)) {
-        response.status(200).json([{
-            message: "Services updated sucessfully!",
-            gruposDeApoioJson
-        }])
-        
-    } else {
-        response.status(404).json([{
-            message: "Could not update services!"
-        }])
+        const newGroup = new gruposDeApoioModel({
+            name,
+            localization,
+            addres,
+            phoneNumber,
+            attendence,
+            services,
+            whatsappGroup,
+        });
+        const saveGroup = await newGroup.save();
+        response.status(200).json({message: "New group successfully registered!", saveGroup})
+    } catch (error) {
+        console.error(error);
+        response.status(500).json({ message: error.message });
+    };
+};
+
+const updateServicesById = async (request, response) => {
+    try {
+        const {
+            name,
+            localization,
+            addres,
+            phoneNumber,
+            attendence,
+            services,
+            whatsappGroup
+        } = request.body;
+        const updateServices = await gruposDeApoioModel.findByIdAndUpdate(
+            request.params.id,
+            {
+                name,
+                localization,
+                addres,
+                phoneNumber,
+                attendence,
+                services,
+                whatsappGroup,
+            }
+        );
+        response.status(200).json(updateServices)
+    } catch {
+        console.error(error);
+        response.status(500).json({ message: error.message })
+    }
+};
+
+const updateAttendenceById = async (request, response,) => {
+    try {
+        const {
+            name,
+            localization,
+            addres,
+            phoneNumber,
+            attendence,
+            services,
+            whatsappGroup
+        } = request.body;
+        const updateServices = await gruposDeApoioModel.findByIdAndUpdate(
+            request.params.id,
+            {
+                name,
+                localization,
+                addres,
+                phoneNumber,
+                attendence,
+                services,
+                whatsappGroup,
+            }
+        );
+        response.status(200).json({message: "Services updated.", updateServices})
+    } catch (error) {
+        console.error(error);
+        response.status(500).json({ message: "Unable to update!" })
+    }
+};
+
+
+const deleteGroup = async (request, response) => {
+    try {
+        const {id} = request.params
+        const deleteGroup = await gruposDeApoioModel.findByIdAndDelete(id)
+        const message = `Group ${deleteGroup.name} sucessfully deleted.`
+        res.status(200).json({message})
+    } catch (error) {
+        console.error(error)
+        response.status(500).json({message: "Undeleted group"
+        })
     }
 }
 
-const updateAttendenceById = (request, response,) => {
-    const idRequest = request.params.id
-    const attendenceRequest = request.body.attendence
-    attendenceFind = gruposDeApoioJson.find((grupos) => grupos.id == idRequest)
+const deleteGroupByName = (request, response) => {
+    const idRequest = request.params.name
+    const deleteGroup = gruposDeApoioModel.findIndex(group => group.name == idRequest)
+    gruposDeApoioModel.splice(deleteGroup, 1)
 
-    if (attendenceFind) {
-        attendenceFind.attendence = attendenceRequest,
-        response.status(200).json([{
-            message: "Attendence updated sucessfully",
-            gruposDeApoioJson
-        }])
-    } else {
-        response.status(404).json([{
-            message: "Could not update attendence"
-        }])
-    }
+    response.status(200).json([{
+        "message": "Group deleted",
+        "Deleted": idRequest,
+        gruposDeApoioModel
+    }])
 }
-
-
-
-
-    const deleteGroupsById = (request, response) => {
-        const idRequest = request.params.id
-        const findGroup = gruposDeApoioJson.findIndex((grupos) => grupos.id == idRequest)
-
-        gruposDeApoioJson.splice(findGroup, 1)
-
-        if (findGroup) {
-            response.status(200).json([{
-                "message": "Selected group was deleted",
-                "deleted":idRequest,
-                gruposDeApoioJson
-            }])
-        } else {
-            response.status(404).send([{
-            message: "Undeleted group"
-            }])
-    }
-}
-
-    const deleteGroupByName = (request, response) => {
-        const idRequest = request.params.name
-        const deleteGroup = gruposDeApoioJson.findIndex(group => group.name == idRequest)
-        gruposDeApoioJson.splice(deleteGroup, 1)
-
-        response.status(200).json([{
-            "message": "Group deleted",
-            "Deleted" : idRequest,
-            gruposDeApoioJson
-        }])
-    }
 
 
 
@@ -150,6 +153,6 @@ module.exports = {
     addNewGroup,
     updateServicesById,
     updateAttendenceById,
-    deleteGroupsById,
+    deleteGroup,
     deleteGroupByName
 }
