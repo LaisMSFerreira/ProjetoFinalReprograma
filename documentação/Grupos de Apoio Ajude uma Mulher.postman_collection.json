@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "afa63faf-e4d8-4431-8b8d-13a8583a0083",
+		"name": "Grupos de Apoio Ajude uma Mulher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27402857"
+	},
+	"item": [
+		{
+			"name": "Busca todos os grupos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "projetofinalreprograma.onrender.com/grupos/lista",
+					"host": [
+						"projetofinalreprograma",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"grupos",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca grupos por nome",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por localização",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir novo grupo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Grupo de Apoio a Mulher de Olinda\",\r\n    \"localization\": \"Olinda\",\r\n    \"addres\": \"xxx-xxx\",\r\n    \"phoneNumber\": 923457,\r\n    \"attendence\": \"24 horas\",\r\n    \"services\": \"Serviço de atendimento psicológico, jurídico, social e educacional. Grupo de whatsapp formado por mulheres que já passaram por alguma situação de violência que ajudam outras mulheres, como forma de demonstrar apoio e suporte para que elas saiam dessa situação em segurança. Grupos tipo creche com rotatividade de mãe voluntária cuidadora dos filhos de mulheres que precisam ir em busca de emprego.\",\r\n    \"whatsappGroup\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2323/grupos/add",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"grupos",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar serviços por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"services\": \"Serviço de atendimento psicológico\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2323/grupos/update/64c0a89d3f8158c92a1f761b",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"grupos",
+						"update",
+						"64c0a89d3f8158c92a1f761b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar horario de atendimento",
+			"request": {
+				"method": "PATCH",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar por Id",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
