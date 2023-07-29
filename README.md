@@ -1,4 +1,8 @@
-Turma Online 22 - B3 | Back-end | Projeto Final [{Reprograma}](https://www.reprograma.com.br/) </b> | 2023 | [LAÍS FERREIRA](https://www.linkedin.com/in/la%C3%ADs-ferreira-80a3b879/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BScRsDh9XS32ExcqxqY%2FIXA%3D%3D) ♑
+<span align="center">
+ 
+Turma Online 22 - B3 | Back-end | Projeto Final [{Reprograma}](https://www.reprograma.com.br/) </b> | 2023 | [LAÍS FERREIRA](https://www.linkedin.com/in/la%C3%ADs-ferreira-80a3b879/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BScRsDh9XS32ExcqxqY%2FIXA%3D%3D) ♑   
+
+</span>
 
 
 ### <p align="center">  APOIE UMA MULHER: Grupos de Acolhimento ♀
@@ -9,16 +13,13 @@ Turma Online 22 - B3 | Back-end | Projeto Final [{Reprograma}](https://www.repro
 
 #### ✨ O PROJETO: 
 
-
 Bem-vinda(o) ao projeto Apoie Uma Mulher. Seu objetivo é reunir todos os grupos de acolhimento as **mulheres cis, trans e travestis** em situação de vulnerabilidade, que sofrem ou sofreram algum tipo de violência doméstica. Grupos esses espalhados por todo o país, para que toda mulher tenha uma rede de apoio. Lembrando que o Brasil é o país que mais mata mulheres trans e travestis, e o constante crescimento de feminicídios.
 
 Os grupos podem ser de whatsapp, facebook ou instagram, ou ainda grupos que possibilitem encontros presenciais. Eles podem ser informativos sobre como e onde encontrar ajuda, por exemplo, o poder público, pois os estados possuem centros de apoio a mulher, que podem disponibilizar atendimento com psicólogas, assistentes sociais, advogadas e educadoras sociais. 
 
 A ideia principal do projeto é deixar as mulheres informadas sobre esses grupos, para que elas se sintam encorajadas a buscar ajuda, seja apenas participando de grupos de whatsapp, onde podem conversar com outras mulheres em mesma situação ou que conseguiram sair dela. Um incentivo ou um simples acolhimento verbal, pode ser tudo o que elas precisam naquele momento.
 
-A proposta é que essas mulheres tenham esperança de uma vida digna e com liberdade.
-Nosso propósito é proporcionar uma vida com liberdade e dignidade a todas as mulheres.
-
+A proposta é que a partir disso elas possam buscar uma vida com liberdade e dignidade.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### ✔️RECURSOS:
@@ -31,7 +32,6 @@ Nosso propósito é proporcionar uma vida com liberdade e dignidade a todas as m
  * Testes: Jest
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 #### ✔️FUNCIONALIDADES:
 
 - [x] poder listar todos os grupos cadastrados
@@ -43,7 +43,6 @@ Nosso propósito é proporcionar uma vida com liberdade e dignidade a todas as m
 - [x] poder remover um grupo
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 #### ✔️ROTAS:
 
 | Verbo  | Descrição da Rota                      |
@@ -101,7 +100,6 @@ Nosso propósito é proporcionar uma vida com liberdade e dignidade a todas as m
 
  
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ### ⭐Agradecimentos:
 
 ### -feito com 💜 por [LAÍS FERREIRA](https://www.linkedin.com/in/la%C3%ADs-ferreira-80a3b879/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BScRsDh9XS32ExcqxqY%2FIXA%3D%3D) ♑
