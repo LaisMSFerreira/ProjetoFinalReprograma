@@ -98,8 +98,22 @@ A proposta é que a partir disso elas possam buscar uma vida com liberdade e dig
    |- 📄 swagger.js
    |- 📄 .gitignore
 
- 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### ⭐Agradecimentos:
+### ⭐Agradecimentos:⭐
 
-### -feito com 💜 por [LAÍS FERREIRA](https://www.linkedin.com/in/la%C3%ADs-ferreira-80a3b879/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BScRsDh9XS32ExcqxqY%2FIXA%3D%3D) ♑
+Agradeço à {REPROGRAMA} pela oportunidade de participar desse bootcamp incrível.
+
+Agradeço à todas as professoras, sempre muito dispostas a passar o conteúdo da melhor forma, dar as melhoras dicas e conselhos.
+
+Agradeço a Deza que ficou durante toda a jornada nos ajudando.
+
+Agradeço a May por todo o acompanhamento, sempre pensando em como melhorar.
+
+Agradeço a Ravena, que foi um anjo mesmo, como minha monitora.
+
+Agradeço a todas as colegas de turma, principalmente aquelas que me deram força quando mais precisei.
+
+Por fim, foi intenso, difícil, desesperador em alguns momentos, mas muito gratificante passar por cada etapa e me sinto muito feliz por estar aqui hoje finalizando 
+meu projeto.
+
+
+<span align="center"> ### -feito com 💜 </span>
