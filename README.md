@@ -98,13 +98,18 @@ A proposta é que a partir disso elas possam buscar uma vida com liberdade e dig
    |- 📄 swagger.js
    |- 📄 .gitignore
 
-### ⭐Agradecimentos:⭐
+
+```
+</br>
+
+#### <b> ⭐Agradecimentos:⭐ </b>
+</br>
 
 Agradeço à {REPROGRAMA} pela oportunidade de participar desse bootcamp incrível.
 
 Agradeço à todas as professoras, sempre muito dispostas a passar o conteúdo da melhor forma, dar as melhoras dicas e conselhos.
 
-Agradeço a Deza que ficou durante toda a jornada nos ajudando.
+Obrigada Deza por ter ficado durante toda a jornada nos ajudando.
 
 Agradeço a May por todo o acompanhamento, sempre pensando em como melhorar.
 
@@ -116,4 +121,4 @@ Por fim, foi intenso, difícil, desesperador em alguns momentos, mas muito grati
 meu projeto.
 
 
-<span align="center"> ### -feito com 💜 </span>
+#### <span align="center"> - feito com 💜 </span>
